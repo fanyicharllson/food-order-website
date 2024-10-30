@@ -1,0 +1,113 @@
+@import "./functions";
+@import "./mixins";
+
+/*Delivery time styling*/
+.delivery-time {
+  width: 100%;
+  padding-top: 80px;
+
+  .delivery-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+
+    .delivery-row {
+      display: grid;
+      grid-template-columns: 6fr 6fr;
+      grid-gap: 30px;
+
+      .delivery-col-1 {
+        .delivery-img-container {
+          max-width: 500px;
+          img {
+            width: 100%;
+            border-radius: 5px;
+          }
+        }
+      }
+      .delivery-col-2 {
+        .delivery-title {
+          font-size: 1.8rem;
+          color: $clr-accent-1;
+        }
+        .delivery-text {
+          color: $clr-secondary-text;
+          line-height: 1.6;
+          font-size: 18px;
+          padding-top: 10px;
+        }
+        .delivery-btns {
+          padding-top: 2rem;
+          display: flex;
+          gap: 1rem;
+
+          a {
+            color: $clr-secondary-anchor;
+            border: 2px solid transparent;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+          }
+          #delivery-order {
+            background-color: $clr-accent-1;
+
+            &:hover {
+              background-color: transparent;
+            }
+          }
+
+          #delivery-order,
+          #delivery-download {
+            border-radius: 25px;
+            padding: 8px 30px;
+            border-color: $clr-accent-1;
+          }
+          #delivery-download {
+            &:hover {
+              background-color: $clr-accent-1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include respond-max(med) {
+  .delivery-time {
+    .delivery-container {
+      .delivery-row {
+        grid-template-columns: 1fr;
+
+        .delivery-col-2 {
+          .delivery-btns {
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}
+@include respond-max(small) {
+  .delivery-time {
+    .delivery-container {
+      .delivery-row {
+        .delivery-col-2 {
+          .delivery-title {
+            font-size: 1.125rem;
+          }
+          .delivery-text {
+            font-size: 15px;
+            line-height: 1.3;
+          }
+
+          .delivery-btns {
+            #delivery-order,
+            #delivery-download {
+              padding: 5px 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

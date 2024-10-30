@@ -1,0 +1,150 @@
+@import "./functions";
+@import "./mixins";
+
+/*Home Beginnig*/
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out, opacity 0.8s ease-in-out;
+  margin-top: 2rem;
+
+  .text-overlay {
+    text-align: center;
+    @include Flex(center);
+    color: $clr-secondary-anchor;
+    z-index: 1;
+    max-width: 80%;
+    margin: 0 auto;
+    height: 100%;
+
+    .text-container {
+      p {
+        line-height: 1.3;
+        font-size: 16px;
+        padding-top: 5px;
+      }
+
+      //   .slider-title-2 {
+      //     margin-left: 3rem;
+      //     margin-bottom: 1rem;
+      //  }
+
+      #slider-title span {
+        color: $clr-accent-1;
+      }
+      #slider-title #now {
+        color: $clr-accent-1;
+      }
+
+      /*Btn*/
+      .btn-container {
+        margin-top: 20px;
+      }
+      .btn-container a {
+        // border: 2px solid $clr-accent-1;
+        padding: 12px 34px;
+        color: $clr-secondary-anchor;
+        border-radius: 5px;
+        background-color: $clr-accent-1;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: $clr-accent-hover;
+        }
+      }
+    }
+  }
+
+  .prev-btn,
+  .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: $clr-secondary-anchor;
+    font-size: Fontsize(font_md);
+    cursor: pointer;
+    padding: 10px;
+    z-index: 2;
+  }
+
+  .prev-btn {
+    left: 10px;
+  }
+  .next-btn {
+    right: 10px;
+  }
+}
+
+/**********************************************/
+/* MEdia queries for this _home.scss file */
+/**********************************************/
+@include respond-max(small) {
+  .slider-container {
+    height: 390px;
+    // margin-top: 2rem;
+
+    .text-overlay {
+      p {
+        font-size: 14px;
+      }
+    }
+
+    #slider-title {
+      font-size: 2rem;
+    }
+
+    .prev-btn,
+    .next-btn {
+      font-size: 2rem;
+      padding: 6px;
+      color: $clr-accent-1;
+      font-weight: bold;
+    }
+    .prev-btn {
+      left: 0;
+    }
+    .next-btn {
+      right: 0;
+    }
+  }
+}
+/*charlse*/
+@include respond-max(semi_meduim-2) {
+  .slider-container {
+    .text-overlay {
+      .text-container {
+        p {
+          font-size: 13px;
+        }
+        #slider-title span,
+        #slider-title #now,
+        #slider-title strong {
+          font-size: 2rem;
+        }
+        .btn-container a {
+          padding: 9px 19px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+@include respond-max(semi_meduim) {
+  .slider-container {
+    height: 390px;
+  }
+}
+@media (max-width: 344px) {
+  .slider-container {
+    height: 460px;
+  }
+}

@@ -1,0 +1,9 @@
+@import './maps';
+//function
+@function Padding($size) {
+    @return map-get($paddings, $size) ;
+}
+
+@function Fontsize($font-size) {
+    @return map-get($fontsize, $font-size);
+}

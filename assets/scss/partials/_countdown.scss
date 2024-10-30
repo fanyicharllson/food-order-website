@@ -1,0 +1,83 @@
+@import './mixins';
+@import './functions';
+
+/* Popup Container */
+.countdown-popup {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $clr-accent-hover;
+    // background-color: #ff5733;
+    color: $clr-secondary-anchor;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000; /* Ensure it's always on top */
+    display: none; /* Initially hidden */
+    animation: slideDown 0.5s ease-in-out; /* Slide-in animation */
+  
+  }
+  
+  /* Animation to slide down */
+  @keyframes slideDown {
+    from { top: -100px; }
+    to { top: 0; }
+  }
+  
+  /* Close button */
+  .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: Fontsize(font_lg);
+    cursor: pointer;
+  }
+  
+  /* Countdown timer styling */
+  .countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .time-box {
+    text-align: center;
+    
+  }
+  
+  .time-box span {
+    font-size: Fontsize(font_sm);
+    font-weight: bold;
+  }
+  
+  .popup-content h3 {
+    margin: 0;
+    font-size: Fontsize(font_sm);
+  }
+  
+  .popup-content p {
+    margin: 10px 0;
+    font-size: 13.5px;
+
+    a {
+        text-decoration: underline;
+        color: $clr-secondary-anchor;
+    }
+  }
+
+
+  /*Media queries for countdown*/
+  @include respond-max(small) {
+    .close-btn {
+        font-size: Fontsize(font_sm);
+    }
+    .popup-content h3 {
+      font-size: 15px;
+    }
+    .time-box span {
+      font-size: 14px;
+    }
+
+
+  }
+  

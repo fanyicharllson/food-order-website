@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us Page</title>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="assets/fontawesome-free-6.5.2-web/css/all.min.css"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+     <!-- Overlay div -->
+     <div class="menu_body" id="menuOverlay"></div>
+    <!-- Header section -->
+    <header>
+      <nav>
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+            <h1>
+              <a href="index.html">Order <span>Now</span></a>
+            </h1>
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <!-- links -->
+          <ul class="links">
+            <li>
+              <a href="index.html" id="active-color">home</a>
+            </li>
+            <li>
+              <a href="full_menu.html">menu</a>
+            </li>
+            <li>
+              <a href="service.html">services</a>
+            </li>
+            <li>
+              <a href="about.html">about us</a>
+            </li>
+            <li>
+              <a href="contact.html">contact us</a>
+            </li>
+          </ul>
+          <ul class="info">
+            <li>
+              <a href="contact.html">Follow Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ======================= -->
+    <!-- Intro section -->
+    <!-- ======================= -->
+    <section class="intro-contact" id="intro">
+      <div class="intro-contact-container">
+        <div class="row">
+          <h2>About us</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, iusto!
+          </p>
+        </div>
+
+        <!-- Image Slider -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="overlay"></div>
+
+              <picture>
+                <source
+                  media="(max-width: 480px)"
+                  srcset="./assets/img/images/item-1.jpeg"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="./assets/img/images/item-1.jpeg"
+                />
+                <img src="./assets/img/images/item-1.jpeg" alt="Image 1" />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <div class="overlay"></div>
+
+              <picture>
+                <source
+                  media="(max-width: 480px)"
+                  srcset="./assets/img/images/item-8.jpeg"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="./assets/img/images/item-8.jpeg"
+                />
+                <img src="./assets/img/images/item-8.jpeg" alt="Image 2" />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <div class="overlay"></div>
+
+              <picture>
+                <source
+                  media="(max-width: 480px)"
+                  srcset="./assets/img/header5.jpg"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="./assets/img/header5.jpg"
+                />
+                <img src="./assets/img/header5.jpg" alt="Image 3" />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <div class="overlay"></div>
+
+              <picture>
+                <source
+                  media="(max-width: 480px)"
+                  srcset="./assets/img/header.jpg"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="./assets/img/header.jpg"
+                />
+                <img src="./assets/img/header.jpg" alt="Image 3" />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <div class="overlay"></div>
+
+              <picture>
+                <source
+                  media="(max-width: 480px)"
+                  srcset="./assets/img/images/item-7.jpeg"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="./assets/img/images/item-7.jpeg"
+                />
+                <img src="./assets/img/images/item-7.jpeg" alt="Image 3" />
+              </picture>
+            </div>
+          </div>
+
+          <!-- Swiper Pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- Swiper Navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cheff section -->
+    <section class="cheff-section">
+      <div class="container">
+        <h3 class="cheff-heading">our chefs</h3>
+        <div class="undeline"></div>
+        <p class="cheff-text-heading">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem tempora
+          odit alias dolore quas dignissimos dolorem sequi voluptas sit ut.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
+          consequuntur.
+        </p>
+        <div class="cheff-row">
+          <div class="cheff-item">
+            <img
+              src="./assets/img/chefs/chef1.jpeg"
+              alt="Chef-1"
+              class="chef-img"
+            />
+            <div class="chef-description">
+              <h4 class="chef-name">Ejong Marine</h4>
+              <p class="chef-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi,
+                cumque.
+              </p>
+              <h5 class="chef-special">Occupation 1</h5>
+            </div>
+          </div>
+          <div class="cheff-item">
+            <img src="./assets/img/chefs/chef2.jpeg"Chef-2" class="chef-img" />
+            <div class="chef-description">
+              <h4 class="chef-name">Etoke Cythia</h4>
+              <p class="chef-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi,
+                cumque.
+              </p>
+              <h5 class="chef-special">Occupation 2</h5>
+            </div>
+          </div>
+          <div class="cheff-item">
+            <img
+              src="./assets/img/chefs/chef3.jpeg"
+              alt="Chef-3"
+              class="chef-img"
+            />
+            <div class="chef-description">
+              <h4 class="chef-name">Htoh Paul</h4>
+              <p class="chef-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi,
+                cumque.
+              </p>
+              <h5 class="chef-special">Occupation 3</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Story section -->
+    <section class="story-section">
+      <div class="story-container">
+        <div class="story-row">
+          <div class="story-text-container">
+            <div class="story-text-row">
+              <h2 class="story-title">our story</h2>
+              <div class="undeline"></div>
+              <p class="story-sub-title">
+                Lorem ipsum dolor sit, amet consectetur.
+              </p>
+
+              <p class="story-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum,
+                voluptatum inventore vero delectus totam exercitationem eos odio
+                tempore earum quam quaerat recusandae vel ab assumenda
+                reiciendis magni nisi.
+              </p>
+            </div>
+          </div>
+
+          <div class="story-image-container">
+            <img src="./assets/img/chefs/cheff.jpeg" alt="Story photo" class="story-img"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Section  -->
+    <section class="special-section">
+      <div class="container-special">
+        <h4 class="special-title">our aim</h4>
+        <div class="undeline"></div>
+        <div class="row-special">
+          <div class="special-image-container">
+            <img
+              src="./assets/img/header.jpg"
+              alt="Food Image"
+              class="special-image"
+            />
+          </div>
+
+          <div class="special-text">
+            <h2 class="special-text-heading">we make every moment special</h2>
+
+            <p class="first-special-para">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente
+              perferendis, unde illum tempora eligendi ducimus reiciendis
+              consequatur voluptatum. Laboriosam, culpa.
+            </p>
+
+            <p class="second-special-para">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi
+              sapiente ex ab enim doloribus. Architecto dolor autem dolores
+              incidunt maiores, placeat aperiam nisi, saepe laudantium quaerat
+              animi nulla libero. Quam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- scrollable up btn -->
+    <button id="backToTop" onclick="scrollToTop()">
+      <i class="fas fa-angle-up"></i>
+     </button>
+
+
+    <script src="./assets/js/header.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var swiper = new Swiper(".swiper-container", {
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          keyboard: {
+            enabled: true, // Enable keyboard navigation
+            onlyInViewport: true,
+          },
+          breakpoints: {
+            480: {
+              slidesPerView: 1,
+              spaceBetween: 8,
+            },
+            768: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            1024: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+          },
+        });
+      });
+    </script>
+    <script src="./assets/js/animations.js"></script>
+    <script src="./assets/js/backToTop.js"></script>
+  </body>
+</html>

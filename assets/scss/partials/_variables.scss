@@ -1,0 +1,49 @@
+
+//primary colors
+$clr-primary: #323232;
+$clr-primary-anchor: #FFFFFF;
+$clr-primary-background: #121212;
+$clr-primary-black: black;
+
+//sidebar hover color
+$clr-sidebar-hover-background:  #2c3e50; 
+
+
+//toggle colors-light-mode
+$clr-primary-anchor-dark: #222222;
+$clr-primary-anchor: #334464;
+
+
+
+//secondary colors
+$clr-secondary-background: #2C2C2C;
+$clr-secondary-text: #A0A0A0;
+$clr-secondary-anchor: white;
+
+//secondary border color
+$clr-secondary-border-color: #ddd;
+
+//accents colors
+$clr-accent-1: #7234fa;
+$clr-accent-2: #1588fc;
+
+//accents colors-hovering
+$clr-accent-hover: #4c21a7;
+
+//accent hover color for images
+$clr-accent-hover-image: rgba(0, 0, 0, 0.8);
+$clr-accent-hover-image-2: rgba(0, 0, 0, 0.5);
+$clr-accent-hover-image-3: rgba(0, 0, 0, 0.6);
+
+
+//box shadow colors
+$clr-accent-shadow-inset: rgba(0, 0, 0, 0.4) 0px -4px 10px inset;
+$clr-accent-dark-shadow: rgba(0, 0, 0, 0.25) 0px 6px 16px;
+$clr-sidebar-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+$clr-sidebar-shadow-2: 3px 3px 5px 1px;
+
+//transitions
+$transition: all 0.2s linear;
+
+//spacing
+$spacing: 0.1rem;

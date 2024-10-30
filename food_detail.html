@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css link -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- fontawesome link -->
+    <link
+      rel="stylesheet"
+      href="./assets/fontawesome-free-6.5.2-web/css/all.min.css"
+    />
+
+    <title>Food Detail || Page</title>
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar" id="navbar-detail">
+      <div class="nav-detail-container detail-flex-nav">
+        <div class="nav-detail-left">
+          <h1>
+            <a href="index.html">Order <span>Now</span></a>
+          </h1>
+        </div>
+
+        <div class="nav-detail-right">
+          <a href="#"><i class="fas fa-shopping-cart shop-icon"></i></a>
+        </div>
+      </div>
+    </nav>
+    <!-- end of navigation -->
+
+    <!-- Start of detail section -->
+    <section class="detail-section">
+      <h1 class="detail-section-heading">detail menu</h1>
+      <div class="detail-section-container detail-flex">
+        <div class="detail-images">
+          <!-- Left container -->
+
+          <div class="main-detail-image">
+            <img
+              src="./assets/img/food_32.png"
+              alt="photo"
+              id="mainImage"
+              class="detail-image"
+            />
+          </div>
+        </div>
+
+        <div class="detail-info">
+          <!-- Right container -->
+          <h2 class="detail-title">Grilled Zuchinni and Barley Salad</h2>
+
+          <div class="rating-detail-div">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <p class="rating-number">(30)</p>
+          </div>
+
+          <!-- description -->
+          <p class="detail-text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure
+            dolores nam corporis magnam voluptatum! Commodi error minima,
+            consequuntur soluta, quas illo nihil recusandae neque hic cumque
+            ducimus quos debitis vel?
+          </p>
+
+          <div class="detail-price-qty">
+            <div class="detail-price">
+              <p class="price-name">Price:</p>
+              <span class="price">$45.99</span>
+            </div>
+
+            <div class="detail-qty">
+              <p class="qty-name">Serves:</p>
+              <div class="qty">
+                <select name="number" id="qty-numbers">
+                  <option value="select">Select</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-link-div">
+            <a href="#" class="detail-link">Add to Cart</a>
+          </div>
+
+          <div class="fullMenuLink">
+            <a href="full_menu.html">explore our full menu</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/js/foodDetail.js"></script>
+  </body>
+</html>

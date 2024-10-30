@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Your Food Now || Website</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- font qwesome icon -->
+    <link
+      rel="stylesheet"
+      href="./assets/fontawesome-free-6.5.2-web/css/all.min.css"
+    />
+  </head>
+  <body>
+     <!-- Overlay div -->
+     <div class="menu_body" id="menuOverlay"></div>
+    <header>
+      <nav>
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+            <h1>
+              <a href="index.html">Order <span>Now</span></a>
+            </h1>
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <!-- links -->
+          <ul class="links">
+            <li>
+              <a href="index.html" class="ul-nav-link">home</a>
+            </li>
+            <li>
+              <a href="full_menu.html" class="ul-nav-link">menu</a>
+            </li>
+            <li>
+              <a href="#faq" class="ul-nav-link">faqs</a>
+            </li>
+            <li>
+              <a href="service.html" class="ul-nav-link">services</a>
+            </li>
+            <li>
+              <a href="about.html" class="ul-nav-link">about us</a>
+            </li>
+            <li>
+              <a href="contact.html" class="ul-nav-link">contact us</a>
+            </li>
+          </ul>
+          <ul class="info">
+            <li>
+              <a href="contact.html">Follow Us</a>
+            </li>
+            <!-- for toggle 
+          <li>
+            <a id="toggle">Toggle</a>
+          </li> -->
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Modal -->
+    <div id="orderModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn-modal">&times;</span>
+        <h2>Place Your Order</h2>
+        <form id="orderForm">
+          <div class="form-group">
+            <label for="foodType">Type of Food:</label>
+            <select id="foodType" name="foodType" required>
+              <option value="">Select food type</option>
+              <option value="Pizza">Pizza</option>
+              <option value="Burger">Burger</option>
+              <option value="Pasta">Pasta</option>
+              <option value="Salad">Salad</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Location:</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              placeholder="Enter your location"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="price">Price:</label>
+            <input
+              type="number"
+              min="1"
+              id="price"
+              name="price"
+              placeholder="Enter price"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              placeholder="Enter quantity"
+              min="1"
+              max="10"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Additional Notes:</label>
+            <textarea
+              id="notes"
+              name="notes"
+              placeholder="Add any notes (optional)"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn-modal">Confirm Order</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Main section -->
+    <main>
+      <!-- Backgroud  slider image -->
+      <div class="slider-container">
+        <div class="text-overlay">
+          <div class="text-container">
+            <h1 id="slider-title">
+              <span> Welcome,</span> <strong>to</strong>
+              <strong class="slider-title-2">"Order</strong>
+              <span id="now">Now"</span>
+            </h1>
+            <p id="slider-description">
+              Whether you're craving a gourmet meal, your favorite comfort food,
+              or exploring new flavors, we connect you with a wide range of
+              local restaurants at your fingertips. With just a few clicks, you
+              can browse menus, customize your order, and have your food
+              delivered fresh to your door. We prioritize quality, efficiency,
+              and customer satisfaction, making dining easy and enjoyable. Order
+              now and experience exceptional service, every time.
+            </p>
+            <div class="btn-container">
+              <a href="#" class="btn" id="orderBtn">Place your order now</a>
+            </div>
+          </div>
+        </div>
+        <!-- Close text-overlay -->
+        <button class="prev-btn" onclick="prevSlide()">&#10094;</button>
+        <button class="next-btn" onclick="nextSlide()">&#10095;</button>
+      </div>
+
+      <!--Sub-Menu section -->
+      <section class="food-menu container">
+        <h1 id="menu-title">A Glimpse of Our Menu</h1>
+        <div class="line"></div>
+
+        <div class="menu-items">
+          <div class="menu-item" data-category="pizza">
+            <img
+              src="./assets/img/food_15.png"
+              alt="Pizza"
+              class="submenu-img"
+            />
+
+            <div class="submenu-img-overlay">
+              <h4 class="product-name-overlay">special menu 3</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="view-more-container">
+          <a href="full_menu.html" id="view-more-btn"
+            >See Full Menu <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Delivery time section -->
+      <section class="delivery-time">
+        <div class="delivery-container">
+          <div class="delivery-row">
+            <div class="delivery-col-1">
+              <div class="delivery-img-container">
+                <img src="./assets/img/images/item-5.jpeg" alt="Food img" />
+              </div>
+            </div>
+            <div class="delivery-col-2">
+              <h4 class="delivery-title">We deliver food within 30 min</h4>
+              <p class="delivery-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+                tenetur laboriosam maiores reiciendis ratione aliquid laborum,
+                laudantium perspiciatis ea ipsa molestias eveniet vel nam, sint
+                est! Molestiae consequuntur totam nostrum.
+              </p>
+
+              <div class="delivery-btns">
+                <a href="#" class="delivey-order-btn" id="delivery-order"
+                  >Order now</a
+                >
+                <a href="#" class="delivey-order-btn" id="delivery-download"
+                  >Download App</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonails section -->
+      <section class="container testimonial">
+        <h1 id="menu-title">What Our Customers Say</h1>
+        <div class="line"></div>
+        <!-- Underline -->
+        <p class="testimonial-text">
+          Our customers satisfaction is our top priority. We're proud to share
+          their thoughts, as they inspire us to continue delivering exceptional
+          dining experiences.
+        </p>
+        <div class="testimonial-container">
+          <div class="testimonial-item testimonial-box delay1">
+            <img
+              src="./assets/img/man.jpeg"
+              alt="User 1"
+              class="testimonial-img"
+            />
+            <div class="testimonial-info">
+              <div class="ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et
+                libero eget ipsum tristique rutrum. Donec eget orci vel felis
+                faucibus consectetur. Sed vel mauris faucibus, condimentum arcu
+                non, tristique neque.
+              </p>
+              <h3>Edward Sam</h3>
+            </div>
+          </div>
+          <div class="testimonial-item testimonial-box delay2">
+            <img
+              src="./assets/img/woman1.jpeg"
+              alt="User 1"
+              class="testimonial-img"
+            />
+            <div class="testimonial-info">
+              <div class="ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et
+                libero eget ipsum tristique rutrum. Donec eget orci vel felis
+                faucibus consectetur. Sed vel mauris faucibus, condimentum arcu
+                non, tristique neque.
+              </p>
+              <h3>Ejong Cynthia</h3>
+            </div>
+          </div>
+          <div class="testimonial-item testimonial-box delay3">
+            <img
+              src="./assets/img/woman2.jpeg"
+              alt="User 1"
+              class="testimonial-img"
+            />
+            <div class="testimonial-info">
+              <div class="ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et
+                libero eget ipsum tristique rutrum. Donec eget orci vel felis
+                faucibus consectetur. Sed vel mauris faucibus, condimentum arcu
+                non, tristique neque.
+              </p>
+              <h3>Celia Jane</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Faqs Section -->
+      <section class="faq" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="line"></div>
+
+        <div class="faq-row">
+          <div class="faq-col-1">
+            <div class="faq-item">
+              <button class="faq-question">
+                Do we do home delivery?
+                <div class="icon">
+                  <i class="fas fa-plus plus-icon"></i>
+                </div>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Placeat nisi fugit dolorum eos qui voluptates, molestiae
+                  impedit hic ipsa molestias libero laboriosam in, deleniti
+                  ullam natus numquam eum error delectus!
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                Can I get food on discount?
+                <div class="icon">
+                  <i class="fas fa-plus plus-icon"></i>
+                </div>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
+                  officia dolorem officiis ipsum eos rerum dolor architecto.
+                  Similique porro possimus blanditiis obcaecati soluta
+                  cupiditate officiis ab. Sequi dolor distinctio nam.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                How long until we deliver food?
+                <div class="icon">
+                  <i class="fas fa-plus plus-icon"></i>
+                </div>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
+                  officia dolorem officiis ipsum eos rerum dolor architecto.
+                  Similique porro possimus blanditiis obcaecati soluta
+                  cupiditate officiis ab. Sequi dolor distinctio nam.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-col-2">
+            <div class="faq-item">
+              <button class="faq-question">
+                Our locations for delivery?
+                <div class="icon">
+                  <i class="fas fa-plus plus-icon"></i>
+                </div>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolorem ipsa quam perspiciatis repellendus culpa minus,
+                  nostrum quasi nulla itaque quae, vitae reprehenderit quaerat
+                  ab assumenda similique, a nihil dicta tenetur explicabo sint?
+                  Recusandae laboriosam iusto neque facere quo ea provident.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                Do we do delivery outside city?
+                <div class="icon">
+                  <i class="fas fa-plus plus-icon"></i>
+                </div>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolorem ipsa quam perspiciatis repellendus culpa minus,
+                  nostrum quasi nulla itaque quae, vitae reprehenderit quaerat
+                  ab assumenda similique, a nihil dicta tenetur explicabo sint?
+                  Recusandae laboriosam iusto neque facere quo ea provident.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                Is it medically trusted?
+                <div class="icon">
+                  <i class="fas fa-plus plus-icon"></i>
+                </div>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolorem ipsa quam perspiciatis repellendus culpa minus,
+                  nostrum quasi nulla itaque quae, vitae reprehenderit quaerat
+                  ab assumenda similique, a nihil dicta tenetur explicabo sint?
+                  Recusandae laboriosam iusto neque facere quo ea provident.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Brand section(place holder for now) -->
+      <!-- <section class="brand-section">
+        <div class="container brand">
+          <h2 id="menu-title">Our Brands</h2>
+          <div class="brand-wrappper">
+            <img src="https://via.placeholder.com/150" alt="Brand 1">
+            <img src="https://via.placeholder.com/150" alt="Brand 2">
+            <img src="https://via.placeholder.com/150" alt="Brand 3">
+            <img src="https://via.placeholder.com/150" alt="Brand 4">
+            <img src="https://via.placeholder.com/150" alt="Brand 5">
+          </div>
+        </div>
+       </section> -->
+
+      <!-- Countdown Notification Popup -->
+      <div id="countdown-notification" class="countdown-popup">
+        <div class="popup-content">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <h3>Limited-Time Offer!</h3>
+          <p>
+            20% Off Your First Order! Use code <strong>FIRST20</strong> to
+            <a href="#">order now</a>. Offer ends in:
+          </p>
+
+          <!-- Countdown Timer -->
+          <div class="countdown-timer" id="countdown">
+            <div class="time-box">
+              <span id="days"></span>
+              <p>Days</p>
+            </div>
+            <div class="time-box">
+              <span id="hours"></span>
+              <p>Hours</p>
+            </div>
+            <div class="time-box">
+              <span id="minutes"></span>
+              <p>Minutes</p>
+            </div>
+            <div class="time-box">
+              <span id="seconds"></span>
+              <p>Seconds</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer section -->
+    <footer class="footer-section">
+      <div class="footer-container">
+        <!-- footer-row-1 -->
+        <div class="footer-row-1">
+          <div class="footer-col-1">
+            <h1>
+              <a href="index.html">Order <span>Now</span></a>
+            </h1>
+            <p class="footer-col-1-text">Order now and take out</p>
+          </div>
+          <div class="footer-col-2">
+            <h2 class="footer-h2">About Us</h2>
+
+            <div class="footer-links">
+              <ul>
+                <li>
+                  <a href="#">About Us</a>
+                </li>
+                <li>
+                  <a href="#">History</a>
+                </li>
+                <li>
+                  <a href="#">Our Team</a>
+                </li>
+                <li>
+                  <a href="#">We are Hiring</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-col-3">
+            <h2 class="footer-h2">How it Works</h2>
+            <div class="footer-links">
+              <ul>
+                <li>
+                  <a href="#">Lorem ipsum</a>
+                </li>
+                <li>
+                  <a href="#">Lorem ipsum</a>
+                </li>
+                <li>
+                  <a href="#">Lorem ipsum</a>
+                </li>
+                <li>
+                  <a href="#">Lorem ipsum</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-col-4">
+            <h2 class="footer-h2">Pages</h2>
+            <div class="footer-links">
+              <ul>
+                <li>
+                  <a href="index.html">Home</a>
+                </li>
+                <li>
+                  <a href="full_menu.html">Menu</a>
+                </li>
+                <li>
+                  <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                  <a href="about.html">About Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-col-5">
+            <h2 class="footer-h2">Popular Locations</h2>
+            <div class="footer-links">
+              <ul>
+                <li>
+                  <a href="#">Lorem ipsum</a>
+                </li>
+                <li>
+                  <a href="#">Lorem ipsum</a>
+                </li>
+                <li>
+                  <a href="#">Lorem ipsum</a>
+                </li>
+                <li>
+                  <a href="#">Lorem ipsum</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--footer row-2 -->
+        <div class="footer-row-2">
+          <div class="footer-row-2-col-1">
+            <h2 class="footer-h2">Payment Options:</h2>
+          </div>
+          <div class="footer-row-2-col-2">
+            <h2 class="footer-h2">Address</h2>
+            <p class="footer-row-2-col-2-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+            </p>
+
+            <div class="footer-row-2-col-2-phone">
+              Phone: <a href="#">(+237)14 567 910 467</a>
+            </div>
+          </div>
+          <div class="footer-row-2-col-3">
+            <h2 class="footer-h2">Additional Infomation</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
+              dolores dolorum! Repudiandae aspernat.
+            </p>
+          </div>
+        </div>
+         <div class="copyright">
+          <p>&copy;2024, All rights reserved,Developer: Charllson</p>
+         </div>
+      </div>
+    </footer>
+
+    <!-- scrollable up btn -->
+     <button id="backToTop" onclick="scrollToTop()">
+      <i class="fas fa-angle-up"></i>
+     </button>
+
+     <script>
+      
+     </script>
+
+    <!-- scripts -->
+     <script src="./assets/js/backToTop.js"></script>
+    <script src="./assets/js/script_index.js"></script>
+    <script src="./assets/js/animations.js"></script>
+    <script src="./assets/js/header.js"></script>
+    <!-- scroll to top js -->
+  </body>
+</html>

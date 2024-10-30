@@ -1,0 +1,44 @@
+//mixins
+@import './maps';
+
+/**********************************************/
+/* Flex */
+/**********************************************/
+@mixin Flex($content) {
+    display: flex;
+    justify-content:  $content;
+    align-items: center;
+}
+
+/**********************************************/
+/* Min-width  maedia queries */
+/**********************************************/
+@mixin respond-to($size) {
+    $breakpoints: map-get($breakpoints , $size);
+
+    @if $breakpoints {
+        @media (min-width: #{$breakpoints}) {
+            @content;
+        }
+    } @else {
+        @warn "Breakpoint #{$size} not found in map!";
+    }
+
+}
+
+/**********************************************/
+/* Max-Width media queries */
+/**********************************************/
+@mixin respond-max($size) {
+    $breakpoints: map-get($breakpoints , $size);
+
+    @if $breakpoints {
+        @media (max-width: #{$breakpoints}) {
+            @content;
+        }
+    } @else {
+        @warn "Breakpoint #{$size} not found in map!";
+    }
+
+}
+

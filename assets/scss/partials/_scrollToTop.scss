@@ -1,0 +1,41 @@
+@import "./functions";
+@import "./mixins";
+
+/*backtotop styling*/
+
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: -60px;
+    padding: 10px 15px;
+    font-size: 17px;
+    background-color: $clr-accent-1;
+    color: $clr-secondary-anchor;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: right 0.4s ease, opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+    border: none;
+    opacity: 0;
+    visibility: hidden;
+
+    &:hover {
+        transform: scale(1.09);
+        background-color: $clr-accent-hover;
+
+    }
+    @include respond-max(small) {
+        font-size: 14px;
+    }
+
+}
+#backToTop.show {
+    visibility: visible;
+    right: 30px;
+    opacity: 1;
+}
+#backToTop.hide {
+    opacity: 0;
+    right: -60px;
+    visibility: hidden;
+}

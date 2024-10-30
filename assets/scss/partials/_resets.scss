@@ -1,0 +1,32 @@
+@import  './mixins';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+    list-style-type: none;
+    font-family: sans-serif;
+}
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+  background-color: black;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+#slider-title { //Overiding h1
+  font-size: 3rem;
+}
+p {
+  font-size: 15px;
+}
+// h2 {
+//   font-size: 2rem;
+// }
+h3, h4 {
+  font-size: 1rem;
+}

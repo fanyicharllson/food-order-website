@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Page</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- font qwesome icon -->
+    <link
+      rel="stylesheet"
+      href="./assets/fontawesome-free-6.5.2-web/css/all.min.css"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+     <!-- Overlay div -->
+     <div class="menu_body" id="menuOverlay"></div>
+    <header>
+      <nav>
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+            <h1>
+              <a href="index.html">Order <span>Now</span></a>
+            </h1>
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <!-- links -->
+          <ul class="links">
+            <li>
+              <a href="index.html" id="active-color">home</a>
+            </li>
+            <li>
+              <a href="full_menu.html">menu</a>
+            </li>
+            <li>
+              <a href="service.html">services</a>
+            </li>
+            <li>
+              <a href="about.html">about us</a>
+            </li>
+            <li>
+              <a href="contact.html">contact us</a>
+            </li>
+          </ul>
+          <ul class="info">
+            <li>
+              <a href="contact.html">Follow Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ======================= -->
+    <!-- Intro section -->
+    <!-- ======================= -->
+    <section class="intro-contact" id="intro">
+      <div class="intro-contact-container">
+        <div class="row">
+          <h2>contact us</h2>
+        </div>
+         <!-- Image Slider -->
+         <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="overlay"></div> <!-- styling in _about.scss -->
+              <picture>
+                <source
+                  media="(max-width: 480px)"
+                  srcset="./assets/img/images/item-1.jpeg"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="./assets/img/images/item-1.jpeg"
+                />
+                <img src="./assets/img/images/item-1.jpeg" alt="Image 1" />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <div class="overlay"></div>
+              <picture>
+                <source
+                  media="(max-width: 480px)"
+                  srcset="./assets/img/images/item-2.jpeg"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="./assets/img/images/item-2.jpeg"
+                />
+                <img src="./assets/img/images/item-2.jpeg" alt="Image 2" />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <div class="overlay"></div>
+
+              <picture>
+                <source
+                  media="(max-width: 480px)"
+                  srcset="./assets/img/images/item-3.jpeg"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="./assets/img/images/item-3.jpeg"
+                />
+                <img src="./assets/img/images/item-3.jpeg" alt="Image 3" />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <div class="overlay"></div>
+
+              <picture>
+                <source
+                  media="(max-width: 480px)"
+                  srcset="./assets/img/images/item-4.jpeg"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="./assets/img/images/item-4.jpeg"
+                />
+                <img src="./assets/img/images/item-4.jpeg" alt="Image 4" />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <div class="overlay"></div>
+
+              <picture>
+                <source
+                  media="(max-width: 480px)"
+                  srcset="./assets/img/images/item-5.jpeg"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="./assets/img/images/item-5.jpeg"
+                />
+                <img src="./assets/img/images/item-5.jpeg" alt="Image 3" />
+              </picture>
+            </div>
+          </div>
+
+          <!-- Swiper Pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- Swiper Navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= -->
+    <!-- contact detail section -->
+    <!-- ======================= -->
+    <div class="section contact-detail-section">
+      <div class="contact-sect-container">
+        <div class="contact-row">
+          <!-- col-1 -->
+          <div class="contact-col-1">
+            <h3>get in touch</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
+              quasi ad? Sit quasi itaque quae, totam animi quia illo soluta quod
+              quo esse, pariatur mollitia. Expedita quia hic vero iure.
+            </p>
+
+            <div class="contact-ways">
+              <div class="contact-way-1">
+                <div class="way-1">
+                  <div href="#">
+                    <i class="fas fa-map"></i>
+                  </div>
+                  <div>
+                    <span id="restu-name">Name of your resturant</span>
+                    <span id="restu-name">Name of your resturant</span>
+                  </div>
+                </div>
+                <div class="way-2">
+                  <a href="#">
+                    <i class="fas fa-phone"></i>
+                  </a>
+
+                  <a href="#">
+                    <span id="first-num">(+237)14 567 900 467</span>
+                    <span> (+237)14 567 910 467</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact-way-2">
+                <div class="way-1">
+                  <a href="#">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                  <a href="#">
+                    <span id="email">Youremail@gmail.com</span>
+                    <span id="email">Youremail@gmail.com</span>
+                  </a>
+                </div>
+                <div class="way-2">
+                  <div>
+                    <i class="fas fa-clock"></i>
+                  </div>
+
+                  <div>
+                    <span
+                      >Open 04:00 pm WITA <br />
+                      Close 01:00 am WITA
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="line"></div>
+              <div class="follow-link">
+                <h4>follow us</h4>
+                <div class="follow-links">
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- col-2 -->
+          <div class="contact-col-2">
+            <h4>Your details</h4>
+            <p>Let us know how to get back to you</p>
+
+            <div class="form-container">
+              <form>
+                <div class="inline-form">
+                  <div class="form-control">
+                    <label for="name">first name:</label>
+                    <input type="text" class="names" id="first-name" required />
+                  </div>
+                  <div class="form-control" id="form-control">
+                    <label for="name">last name:</label>
+                    <input type="text" class="names" id="last-name" required />
+                  </div>
+                </div>
+                <div class="block-form">
+                  <div class="form-control" id="form-control">
+                    <label for="email">EMAIL ADDRESS:</label>
+                    <input
+                      type="email"
+                      placeholder="mike@gmail.com"
+                      id="email"
+                      required
+                    />
+                  </div>
+                  <div class="form-control" id="form-control">
+                    <label for="subject">SUBJECT:</label>
+                    <input
+                      type="text"
+                      placeholder="Subject"
+                      id="subject"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-control" id="form-control">
+                    <label for="question_comments">Message:</label>
+                    <textarea
+                      name="comments_questions"
+                      id="comments_questions"
+                      placeholder="Message"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="submit-btn">
+                    <button type="submit">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- scrollable up btn -->
+    <button id="backToTop" onclick="scrollToTop()">
+      <i class="fas fa-angle-up"></i>
+     </button>
+
+
+    <script src="./assets/js/header.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var swiper = new Swiper(".swiper-container", {
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          keyboard: {
+            enabled: true, // Enable keyboard navigation
+            onlyInViewport: true,
+          },
+          breakpoints: {
+            480: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            1024: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+            },
+          },
+        });
+      });
+    </script>
+    <script src="./assets/js/backToTop.js"></script>
+  </body>
+</html>

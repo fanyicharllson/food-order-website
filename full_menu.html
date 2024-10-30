@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oder Now || Full Menu Page</title>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fontawesome-free-6.5.2-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- Overlay div -->
+    <div class="menu_body" id="menuOverlay"></div>
+
+    <!-- Navigation bar -->
+    <nav class="navbar"> 
+      <div class="nav-container nav-flex">
+        <div class="nav-left">
+          <button id="sidebarToggle" class="toggle-btn">
+            <i class="fas fa-bars"></i>
+            <!-- Hamburger icon -->
+          </button>
+        </div>
+        <div class="nav-center">
+          <input
+            type="text"
+            placeholder="Search your menu here..."
+            class="search-bar"
+          />
+
+          <div class="tooltip">
+            <button class="search-btn">
+              <span class="tooltip-text">Search</span
+              ><i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+        <div class="nav-right">
+          <i class="fas fa-shopping-cart shop-icon"></i>
+          <!-- Shop icon -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+      <a href="#" class="closebtn" id="closeSidebar">
+        <i class="fas fa-times"></i>
+        <!-- Close icon -->
+      </a>
+      <a href="index.html">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <!-- filter buttons -->
+
+    <div class="menu-btn-containers">
+      <div class="scrollable-btns">
+        <!-- <button type="button" class="filter-btn active" data-id="all">
+          all menu
+        </button>
+        <button type="button" class="filter-btn" data-id="breakfast">
+          breakfast
+        </button>
+        <button type="button" class="filter-btn" data-id="lunch">lunch</button>
+        <button type="button" class="filter-btn" data-id="shakes">
+          shakes
+        </button>
+        <button type="button" class="filter-btn" data-id="dinner">
+          dinner
+        </button> -->
+      </div>
+    </div>
+
+    <!--Beginning of  Full Menu Content -->
+
+    <section class="menu">
+      <!-- title -->
+      <!-- <div class="title">
+        <h2>our menu</h2>
+        <div class="underline"></div>
+      </div> -->
+
+      <h6 class="full-menu-title">All Menu</h6>
+      <!-- menu items -->
+      <div class="section-container">
+        <!-- single item -->
+        <!-- <article class="menu-item-full">
+          <div class="menu-img-container">
+          <img src="./assets/img/food_15.png" alt="menu item" class="photo" />
+          <div class="menu-img-overlay">
+            <h4 class="product-name-overlay">Buttermilk Pancakes</h4>
+          </div>
+         </div>
+
+          <div class="item-name">
+            <span>
+              <h4 class="product-name">buttermilk pancakes</h4>
+            </span>
+          </div>
+
+          <div class="item-price">
+            <h3>$20.56</h3>
+          </div>
+
+          <div class="order-btns">
+            <div class="order-btn">
+              <a href="#">Order Now</a>
+            </div>
+            <div class="detail-btn">
+              <a href="#">View Detail</a>
+            </div>
+          </div>
+        </article> -->
+        <!-- end of single item -->
+      </div>
+    </section>
+
+     <!-- scrollable up btn -->
+     <button id="backToTop" onclick="scrollToTop()">
+      <i class="fas fa-angle-up"></i>
+     </button>
+
+
+    <script src="./assets/js/script_fullmenu.js"></script>
+    <script src="./assets/js/foodsfullmenu.js"></script>
+    <script src="./assets/js/animations.js"></script>
+    <script src="./assets/js/backToTop.js"></script>
+  </body>
+</html>
