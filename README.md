@@ -1,3 +1,6 @@
+# NB
+Do Not enter any sensitive information(card information or password) as this project was build for pratice purposes.
+
 # Food Order Website
 
 ## Description

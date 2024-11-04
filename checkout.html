@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Page</title>
+
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- fontawesome link -->
+    <link
+      rel="stylesheet"
+      href="./assets/fontawesome-free-6.5.2-web/css/all.min.css"
+    />
+  </head>
+  <body id="payment-body">
+    <!-- Overlay div -->
+    <div class="menu_body" id="menuOverlay"></div>
+    <header>
+      <nav>
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+            <h1>
+              <a href="index.html">Order <span>Now</span></a>
+            </h1>
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <!-- links -->
+          <ul class="links">
+            <li>
+              <a href="index.html" class="ul-nav-link">home</a>
+            </li>
+            <li>
+              <a href="full_menu.html" class="ul-nav-link">menu</a>
+            </li>
+            <li>
+              <a href="about.html" class="ul-nav-link">about us</a>
+            </li>
+            <li>
+              <a href="contact.html" class="ul-nav-link">contact us</a>
+            </li>
+          </ul>
+          <ul class="info">
+            <li>
+              <a href="contact.html">Follow Us</a>
+            </li>
+            <!-- for toggle 
+          <li>
+            <a id="toggle">Toggle</a>
+          </li> -->
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Checkout form -->
+    <section class="checkout-section">
+      <div class="checkout-container">
+        <div class="checkout-row">
+          <!-- first col -->
+          <div class="checkout-form">
+            <h3>Checkout</h3>
+            <form action=".">
+              <div class="mb-3">
+                <label for="email" id="email" class="email">Contact Infomation</label>
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  id="email"
+                  required
+                  name="email"
+                />
+              </div>
+              <div class="mb-1">
+                <label for="news" class="checkbox-container">
+                  <input type="checkbox" id="news" name="news" />
+                  <span class="checkbox-custom"></span>
+                  Email me with news and offers
+                </label>
+              </div>
+              <!-- <div class="mb-3">
+                <div class="underline"></div>
+              </div> -->
+              <div class="mb-2">
+                <h4 for="title">Delivery Address</h4>
+              </div>
+              <div class="mb-3 d-flex">
+                <div class="mb-1">
+                  <label for="firstName">First Name</label>
+                  <input type="text" placeholder="Your First Name" name="firstName" id="firstName" required/>
+                </div>
+                <div class="mb-1">
+                  <label for="lastName">Last Name</label>
+                  <input
+                    type="text"
+                    placeholder="Your Last Name"
+                    required
+                    name="lastName"
+                    id="lastName"
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="country">Country</label>
+                <select name="country" id="country" required>
+                  <option value="">Select your country</option>
+                  <option value="Cammeroon">Cameroon</option>
+                  <option value="Nigeria">Nigeria</option>
+                  <option value="Ghana">Ghana</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="address">Address</label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Your Address"
+                  name="address"
+                  id="address"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="phone">Phone</label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Your Phone"
+                  name="phone"
+                  id="phone"
+                />
+              </div>
+              <div class="mb-3 d-grid">
+                <div class="mb-1">
+                  <label for="towns">Town</label>
+                  <select name="towns" id="towns" required>
+                    <option value="">Your Town</option>
+                    <option value="Town1">Town 1</option>
+                    <option value="Town2">Town 2</option>
+                    <option value="Town3">Town 3</option>
+                    <option value="Town4">Town 4</option>
+                  </select>
+                </div>
+                <div class="mb-1">
+                  <label for="states">State</label>
+                  <select name="states" id="states" required>
+                    <option value="">Your State</option>
+                    <option value="state1">State 1</option>
+                    <option value="state2">State 2</option>
+                    <option value="state3">State 3</option>
+                    <option value="state4">State 4</option>
+                  </select>
+                </div>
+                <div class="mb-1">
+                  <label for="zipCode">ZipCode</label>
+                  <input type="text" placeholder="ZipCode" name="zipCode" id="zipCode" />
+                </div>
+              </div>
+
+              <div class="mb-1">
+                <label for="terms" class="checkbox-container">
+                  <input type="checkbox" id="terms" name="terms"/>
+                  <span class="checkbox-custom"></span>
+                  I have read and aggree to the terms and conditions
+                </label>
+              </div>
+              <!-- <div class="mb-3">
+                <button type="submit">Submit</button>
+              </div> -->
+            </form>
+          </div>
+
+          <!-- Middle line -->
+          <!-- <div class="middle-line">
+            <div class="line"></div>
+          </div> -->
+
+          <!-- second col -->
+          <div class="checkout-summary">
+            <div class="summary-row">
+              <h3>Order Summary</h3>
+              <div class="summary-img-text">
+                <div class="img-container">
+                  <img
+                    src="assets/img/food_20.png"
+                    alt="Food Image"
+                    class="summary-img"
+                  />
+                </div>
+                <div class="summary-text">
+                  <p class="image-name">Butter Cake</p>
+                  <p class="image-price">Price: <span>$10.00</span></p>
+                  <p class="image-serve">Qty: <span>2</span></p>
+                  <div class="links">
+                    <a href="#">Edit</a>
+                    <a href="#">Remove</a>
+                  </div>
+                </div>
+              </div>
+              <div class="summary-img-text">
+                <div class="img-container">
+                  <img
+                    src="assets/img/food_25.png"
+                    alt="Food Image"
+                    class="summary-img"
+                  />
+                </div>
+                <div class="summary-text">
+                  <p class="image-name">Special Salade</p>
+                  <p class="image-price">Price: <span>$13.00</span></p>
+                  <p class="image-serve">Qty: <span>2</span></p>
+                  <div class="links">
+                    <a href="#">Edit</a>
+                    <a href="#">Remove</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Promo code form -->
+              <div class="promo-code-container">
+                <form action="">
+                  <div class="mb-3">
+                    <label for="code">Enter promo code to get discount:</label>
+                    <input
+                      type="text"
+                      maxlength="7"
+                      placeholder="Promo Code"
+                      name="code"
+                      id="code"
+                    />
+                  </div>
+                </form>
+              </div>
+
+              <!-- Price summary container -->
+              <div class="summary-price-detail">
+                <div class="row">
+                  <div class="col-1">
+                    <div class="subtotal">
+                      <p>Subtotal</p>
+                    </div>
+                    <div class="subtotal-price">$46.00</div>
+                  </div>
+                  <div class="col-1">
+                    <div class="subtotal">
+                      <p>Shipping</p>
+                    </div>
+                    <div class="subtotal-price">$100.00</div>
+                  </div>
+                  <div class="col-1">
+                    <div class="subtotal">
+                      <p>Discount</p>
+                    </div>
+                    <div class="subtotal-price">$00.00</div>
+                  </div>
+                  <div class="col-1">
+                    <div class="subtotal">
+                      <p>Total</p>
+                    </div>
+                    <div class="subtotal-price">$146.00</div>
+                  </div>
+                </div>
+              </div>
+              <!-- confirm payment form -->
+              <div class="payment-container">
+                <div class="mb-3">
+                  <a href="payment.html" name="proceed-to-payment" id="proceed-to-payment">Proceed to Payment</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/js/header.js"></script>
+  </body>
+</html>

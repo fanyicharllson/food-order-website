@@ -232,7 +232,7 @@ window.addEventListener("click", (e) => {
 // Handle form submission (example of event handling, you can customize this)
 orderForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  alert("Order placed successfully!");
+  // alert("Order placed successfully!");
   modal.classList.remove("show");
   body.classList.remove("modal-open");
   // Here, you would add your logic for form submission, e.g., sending data to server

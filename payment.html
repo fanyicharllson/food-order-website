@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Method</title>
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- font qwesome icon -->
+    <link
+      rel="stylesheet"
+      href="./assets/fontawesome-free-6.5.2-web/css/all.min.css"
+    />
+  </head>
+  <body id="payment-body">
+    <!-- Overlay div -->
+    <div class="menu_body" id="menuOverlay"></div>
+    <header>
+      <nav>
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+            <h1>
+              <a href="checkout.html" id="arrow-left-id"><i class="fas fa-arrow-left"></i></a>
+            </h1>
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <!-- links -->
+          <ul class="links">
+            <li>
+              <a href="index.html" class="ul-nav-link">home</a>
+            </li>
+            <li>
+              <a href="full_menu.html" class="ul-nav-link">menu</a>
+            </li>
+            <li>
+              <a href="about.html" class="ul-nav-link">about us</a>
+            </li>
+            <li>
+              <a href="contact.html" class="ul-nav-link">contact us</a>
+            </li>
+          </ul>
+          <ul class="info">
+            <li>
+              <a href="contact.html">Follow Us</a>
+            </li>
+            <!-- for toggle 
+          <li>
+            <a id="toggle">Toggle</a>
+          </li> -->
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="payment-container-method">
+      <h2>Payment Information</h2>
+      <form class="payment-form">
+        <label for="cardholder">Cardholder Name</label>
+        <input
+          type="text"
+          id="cardholder"
+          name="cardholder"
+          placeholder="John Doe"
+          required
+        />
+
+        <label for="cardtype">Card Type</label>
+        <select id="cardtype" name="cardtype">
+          <option value="">Select Card Type</option>
+          <option value="visa">Visa</option>
+          <option value="mastercard">MasterCard</option>
+          <option value="amex">American Express</option>
+          <option value="discover">Discover</option>
+        </select>
+
+        <label for="cardnumber">Card Number</label>
+        <input
+          type="text"
+          id="cardnumber"
+          name="cardnumber"
+          placeholder="1234 5678 9012 3456"
+          required
+        />
+
+        <div class="expiration-cvc">
+          <div>
+            <label for="expiration">Expiration Date</label>
+            <input
+              type="text"
+              id="expiration"
+              name="expiration"
+              placeholder="MM/YY"
+              required
+            />
+          </div>
+          <div>
+            <label for="cvc">CVC</label>
+            <input type="text" id="cvc" name="cvc" placeholder="123" required />
+          </div>
+        </div>
+
+        <button type="submit">Submit Payment</button>
+      </form>
+      <div id="error-message" class="error-message"></div>
+    </div>
+
+    <script src="assets/js/paymethod.js"></script>
+    <script src="./assets/js/header.js"></script>
+  </body>
+</html>
