@@ -5,7 +5,7 @@
 .checkout-section {
   padding-top: 100px;
   padding-bottom: Padding(pad_md);
-  background-color: $clr-primary-background;
+  // background-color: $clr-primary-background;
 
   .checkout-container {
     width: 95%;
@@ -28,8 +28,6 @@
       }
 
       .checkout-form {
-        // padding: 0 Padding(pad_smd);
-
         .mb-3 {
           margin-bottom: 1.5rem;
         }
@@ -50,10 +48,10 @@
           grid-template-columns: 6fr 6fr;
           grid-gap: 1rem;
 
-          @include respond-max(x-medim) {
-            grid-template-columns: 1fr;
-            
-          }
+          // @include respond-max(x-medim) {
+          //   grid-template-columns: 1fr;
+
+          // }
         }
 
         .checkbox-container {
@@ -160,7 +158,7 @@
           // flex-direction: column;
           h3 {
             color: $clr-secondary-anchor;
-            font-size: 1rem;
+            font-size: 1.5rem;
             letter-spacing: 0.2rem;
             margin-bottom: 1rem;
             // text-align: center;
@@ -191,13 +189,22 @@
               color: $clr-accent-1;
               padding-left: 0.5rem;
             }
-            .links {
+            .summary-links {
               padding-top: Padding(pad);
+              display: flex;
+              gap: 1rem;
 
-              a {
-                font-size: 12px;
+              .edit,
+              .remove {
+                font-size: 13px;
                 text-decoration: underline;
-                // color: $clr-accent-hover-image-2;
+                color: $clr-secondary-anchor;
+                letter-spacing: 0.1rem;
+                transition: color 0.3s ease;
+
+                &:hover {
+                  color: $clr-accent-1;
+                }
               }
             }
           }
@@ -234,8 +241,6 @@
                   color: $clr-secondary-anchor;
                   font-size: 15px;
                 }
-                
-
               }
             }
           }
@@ -256,9 +261,6 @@
                 color: $clr-secondary-anchor;
                 cursor: pointer;
                 transition: background 0.3s ease;
-
-
-               
 
                 &:hover {
                   background: $clr-accent-hover;
