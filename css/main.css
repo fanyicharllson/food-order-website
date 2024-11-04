@@ -2835,7 +2835,6 @@ textarea {
 .checkout-section {
   padding-top: 100px;
   padding-bottom: 1.5rem;
-  background-color: #121212;
 }
 .checkout-section .checkout-container {
   width: 95%;
@@ -2883,11 +2882,6 @@ textarea {
   display: grid;
   grid-template-columns: 6fr 6fr;
   grid-gap: 1rem;
-}
-@media (max-width: 580px) {
-  .checkout-section .checkout-container .checkout-row .checkout-form .d-flex {
-    grid-template-columns: 1fr;
-  }
 }
 .checkout-section .checkout-container .checkout-row .checkout-form .checkbox-container {
   display: -webkit-box;
@@ -2981,7 +2975,7 @@ textarea {
 }
 .checkout-section .checkout-container .checkout-row .checkout-summary .summary-row h3 {
   color: white;
-  font-size: 1rem;
+  font-size: 1.5rem;
   letter-spacing: 0.2rem;
   margin-bottom: 1rem;
 }
@@ -3010,12 +3004,25 @@ textarea {
   color: #7234fa;
   padding-left: 0.5rem;
 }
-.checkout-section .checkout-container .checkout-row .checkout-summary .summary-row .summary-text .links {
+.checkout-section .checkout-container .checkout-row .checkout-summary .summary-row .summary-text .summary-links {
   padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
 }
-.checkout-section .checkout-container .checkout-row .checkout-summary .summary-row .summary-text .links a {
-  font-size: 12px;
+.checkout-section .checkout-container .checkout-row .checkout-summary .summary-row .summary-text .summary-links .edit,
+.checkout-section .checkout-container .checkout-row .checkout-summary .summary-row .summary-text .summary-links .remove {
+  font-size: 13px;
   text-decoration: underline;
+  color: white;
+  letter-spacing: 0.1rem;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.checkout-section .checkout-container .checkout-row .checkout-summary .summary-row .summary-text .summary-links .edit:hover,
+.checkout-section .checkout-container .checkout-row .checkout-summary .summary-row .summary-text .summary-links .remove:hover {
+  color: #7234fa;
 }
 .checkout-section .checkout-container .checkout-row .checkout-summary .summary-row .promo-code-container {
   margin-top: 3rem;
