@@ -85,7 +85,7 @@ function displayFullMenu(data) {
 
           <div class="order-btns">
             <div class="order-btn">
-              <a href="#">Add to Cart</a>
+              <a href="checkout.html?id=${dataContent.id - 1}">Order</a>
             </div>
             <div class="detail-btn">
                 <!-- Passing product image dynamically to detail page -->
